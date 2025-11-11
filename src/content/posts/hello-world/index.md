@@ -12,7 +12,7 @@ This blog is created using [Astro](https://astro.build) with the [MultiTerm](htt
 
 ## Installation
 
-Install some required packages:
+Install the required packages:
 
 You can also refer to the README.md in the theme's GitHub [repository](https://github.com/stelcodes/multiterm-astro)
 
@@ -29,7 +29,7 @@ git clone --depth 1 https://github.com/stelcodes/multiterm-astro my-new-blog && 
 Install dependencies and go:
 
 ```bash
-npm Install
+npm install
 npm run dev
 npm run build && npm run preview
 ```
@@ -40,9 +40,6 @@ To learn about some in-depth configuration and how to post, please refer to this
 
 ## Deploy on CloudFlare Pages
 
-Install Wrangler and login
+Create a new GitHub repository and commit the full `my-new-blog` dir. Then login CloudFlare Dashboard.
 
-```bash
-npm install -g wrangler
-wrangler login
-```
+Create a Pages app by importing an existing Git repository, and then select the Astro framework present. Save and depoly and then you will see your site.
