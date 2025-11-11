@@ -31,3 +31,7 @@ I use **Neovim** to code.
 - Email
 
 > [PositronSpin@outlook.com](mailto:PositronSpin@outlook.com)
+
+## Friends & Links
+
+- [QcN3ep's blog](https://qcn3ep.github.io)
