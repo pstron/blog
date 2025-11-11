@@ -4,7 +4,7 @@ const config: SiteConfig = {
   // Absolute URL to the root of your published site, used for generating links and sitemaps.
   site: 'https://blog.feynmach.com',
   // The name of your site, used in the title and for SEO.
-  title: 'Archive',
+  title: 'Positronium',
   // The description of your site, used for SEO and RSS feed.
   description:
     'A blog about technologies.',
@@ -157,7 +157,7 @@ const config: SiteConfig = {
   socialLinks: {
     github: 'https://github.com/pstron',
     // mastodon: 'https://github.com/stelcodes/multiterm-astro',
-    email: 'mailto:PositronSpin@outlook.com',
+    email: 'PositronSpin@outlook.com',
     // linkedin: 'https://github.com/stelcodes/multiterm-astro',
     // bluesky: 'https://github.com/stelcodes/multiterm-astro',
     // twitter: 'https://github.com/stelcodes/multiterm-astro',
