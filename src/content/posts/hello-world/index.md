@@ -14,7 +14,7 @@ This blog is created using [Astro](https://astro.build) with the [MultiTerm](htt
 
 Install the required packages:
 
-You can also refer to the README.md in the theme's GitHub [repository](https://github.com/stelcodes/multiterm-astro)
+You can also refer to the README.md in the theme's GitHub [repository](https://github.com/stelcodes/multiterm-astro).
 
 ```bash
 pacman -S nodejs npm git
@@ -36,7 +36,7 @@ npm run build && npm run preview
 
 ## More
 
-To learn about some in-depth configuration and how to post, please refer to this [post](./showing-off-blog-features) and the offical docs in the GitHub [repository](https://github.com/stelcodes/multiterm-astro)
+To learn about some in-depth configuration and how to post, please refer to this [post](./showing-off-blog-features) and the offical docs in the GitHub [repository](https://github.com/stelcodes/multiterm-astro).
 
 ## Deploy on CloudFlare Pages
 
