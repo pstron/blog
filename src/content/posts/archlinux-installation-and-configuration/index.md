@@ -222,7 +222,7 @@ Install GRUB:
 
 ```bash
 pacman -S grub efibootmgr os-prober
-grub-install -target=x86_64-efi -efi-directory=/boot --bootloader-id=GRUB
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 ```
 
 Get your swap partition id:
@@ -257,7 +257,7 @@ Edit `resume` hook:
 vim /etc/mkinitcpio.conf
 ```
 
-Add `resume` in the `HOOKS` line. It must be added after `udev`, and before `lvm2` if there is it.
+Add `resume` in the `HOOKS` line. It must be added after `udev`, after `block`, before `filesystems` and before `lvm2` if there is it.
 
 Regenerate `initramfs`:
 
