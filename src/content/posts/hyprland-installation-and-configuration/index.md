@@ -6,4 +6,12 @@ tags: ['archlinux', 'hyprland']
 toc: true
 ---
 
-Working In Progress...
+Working in progress.
+
+:::important
+I assume you have installed the Arch Linux based on my previous [post](/posts/archlinux-installation-and-configuration). If not, please refer to this with caution.
+:::
+
+::github{repo="pstron/dotfiles"}
+
+This configuration is based on my dotfiles repository.

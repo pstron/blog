@@ -210,15 +210,57 @@ passwd root
 
 ```bash
 # Choose one
-pacman -S intel-ucoed
+pacman -S intel-ucode
 pacman -S amd-ucode
 ```
 
 ### Boot software
 
+Install GRUB:
+
 ```bash
-pacman -S refind
-refind-install
+pacman -S grub efibootmgr os-prober
+grub-install -target=x86_64-efi -efi-directory=/boot --bootloader-id=GRUB
+```
+
+Get your swap partition id:
+
+```bash
+lsblk -o name,mountpoint,size,uuid | grep SWAP
+```
+
+Configuration:
+
+```bash
+vim /etc/default/grub
+```
+
+```
+GRUB_CMDLINE_LINUX_DEFAULT="loglevel=5 nowatchdog resume=UUID=[your swap partition uuid]"
+GRUB_DISABLE_OS_PROBER=false
+GRUB_DEFAULT=saved
+GRUB_SAVEDEFAULT=true
+GRUB_DISABLE_SUBMENU=y # Opitional
+```
+
+Apply:
+
+```bash
+grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+Edit `resume` hook:
+
+```bash
+vim /etc/mkinitcpio.conf
+```
+
+Add `resume` in the `HOOKS` line. It must be added after `udev`, and before `lvm2` if there is it.
+
+Regenerate `initramfs`:
+
+```bash
+sudo mkinitcpio -P
 ```
 
 ### Enter your Arch Linux
