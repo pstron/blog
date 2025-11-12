@@ -118,7 +118,7 @@ mkfs.btrfs -L ArchZone /dev/sdxn
 
 *You can also use your own label instead of `ArchZone`*
 
-```
+```bash
 mount -t btrfs -o compress=zstd /dev/sdxn /mnt
 btrfs subvolume create /mnt/@
 btrfs subvolume create /mnt/@home
@@ -128,7 +128,7 @@ umount /mnt
 
 ### Mount
 
-```
+```bash
 mount -t btrfs -o subvol=/@,compress=zstd /dev/sdxn /mnt
 mkdir /mnt/home
 mount -t btrfs -o subvol=/@home,compress=zstd /dev/sdxn /mnt/home
@@ -184,7 +184,7 @@ vim /etc/hostname
 vim /etc/hosts
 ```
 
-```hosts
+```
 127.0.0.1   localhost
 ::1 localhost
 127.0.1.1   [hostname].localdomain [hostname]
@@ -222,6 +222,8 @@ refind-install
 ```
 
 ### Enter your Arch Linux
+
+After the above steps, you can reboot and directly enter you Arch Linux now!
 
 #### Connecting to WIFI
 
@@ -323,4 +325,10 @@ Now you can change your shell to zsh:
 chsh -s /bin/zsh
 ```
 
-To install Hyprland and other, refer to the next [post](/posts/hyprland-installation-and-configuration)
+To install Hyprland and other, refer to the next [post](/posts/hyprland-installation-and-configuration).
+
+## References
+
+[Arch Linux Brief Guide](https://arch.icekylin.online/) - A really nice guide for Arch Linux installation. Especially for CN users.
+
+[Arch Linux Wiki](https://wiki.archlinux.org/) - Almost everything you want to know about Arch Linux or even more can be found here.
