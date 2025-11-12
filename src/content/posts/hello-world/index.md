@@ -6,7 +6,7 @@ tags: ['astro', 'blog', 'markdown']
 toc: true
 ---
 
-Hello, my new blog!
+Hello, my new blog! Nice to see the blog is running well now. Here is also a record for setting up the blog.
 
 This blog is created using [Astro](https://astro.build) with the [MultiTerm](https://astro.build/themes/details/multiterm/) theme on November 11, 2025, and deployed on CloudFlare Pages.
 
@@ -38,7 +38,7 @@ npm run build && npm run preview
 
 Edit `src/site.config.ts` to custom your site. Replace `src/pages/about.md`, `src/content/addendum.md`, `src/content/avatar.jpg` with yours and write your own posts in `src/content/posts`.
 
-To learn about some in-depth configuration and how to post, please refer to this [post](./showing-off-blog-features) and the offical docs in the GitHub [repository](https://github.com/stelcodes/multiterm-astro).
+To learn about some in-depth configuration and how to post, please refer to this [post](/posts/showing-off-blog-features) and the offical docs in the GitHub [repository](https://github.com/stelcodes/multiterm-astro).
 
 ## Deploy on CloudFlare Pages
 

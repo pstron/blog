@@ -323,4 +323,4 @@ Now you can change your shell to zsh:
 chsh -s /bin/zsh
 ```
 
-To install Hyprland and other, refer to the next [post](./hyprland-installation-and-configuration)
+To install Hyprland and other, refer to the next [post](/posts/hyprland-installation-and-configuration)
