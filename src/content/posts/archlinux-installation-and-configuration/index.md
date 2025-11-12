@@ -348,15 +348,13 @@ pacman -Sy archlinuxcn-keyring
 pacman -Syyu
 ```
 
-## Hyprland and more with my dotfiles
+## Hyprland and more with my dotfiles (Opitional)
 
 Login with your main user instead of root for the following steps.
 
 ::github{repo="pstron/dotfiles"}
 
-My dotfiles repository includes mordern configuration files for CLI tools like `zsh` and a fancy rice for `Hyprland`.
-
-Use it with yadm:
+My dotfiles repository includes mordern configuration files for CLI tools like `zsh` and a fancy rice for `Hyprland`. For example, get a mordern `zsh` instantly through that:
 
 ```bash
 sudo pacman -S yadm
@@ -366,6 +364,7 @@ yadm clone -b dotfiles git@github.com:pstron/dotfiles.git
 Now you can change your shell to zsh:
 
 ```bash
+pacman -S fzf # fzf is required
 chsh -s /bin/zsh
 ```
 
