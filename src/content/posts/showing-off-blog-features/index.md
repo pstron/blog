@@ -6,7 +6,7 @@ tags: ['demo']
 toc: true
 ---
 
-Since the post does not have a description in the frontmatter, the first paragraph is used.
+This is a part of the theme's doc, not my work. Kept for reference. Since the post does not have a description in the frontmatter, the first paragraph is used.
 
 ## Theming
 

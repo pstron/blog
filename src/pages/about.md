@@ -3,7 +3,6 @@ layout: '~/layouts/MarkdownLayout.astro'
 title: About Me
 ---
 
-
 **Positron**
 > A particle of positive charge, pursuing clean code and elegant solutions.
 > Has a spin of ½.
@@ -34,4 +33,4 @@ I use **Neovim** to code.
 
 ## Friends & Links
 
-- [QcN3ep's blog](https://qcn3ep.github.io)
+[Links](/links)

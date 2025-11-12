@@ -45,8 +45,12 @@ const config: SiteConfig = {
       url: '/music',
     },
     {
+      name: 'Links',
+      url: '/links',
+    },
+    {
       name: 'GitHub',
-      url: 'https://github.com/pstron',
+      url: 'https://github.com/pstron/blog',
       external: true,
     },
   ],

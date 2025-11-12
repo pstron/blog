@@ -36,6 +36,8 @@ npm run build && npm run preview
 
 ## More
 
+Edit `src/site.config.ts` to custom your site. Replace `src/pages/about.md`, `src/content/addendum.md`, `src/content/avatar.jpg` with yours and write your own posts in `src/content/posts`.
+
 To learn about some in-depth configuration and how to post, please refer to this [post](./showing-off-blog-features) and the offical docs in the GitHub [repository](https://github.com/stelcodes/multiterm-astro).
 
 ## Deploy on CloudFlare Pages
