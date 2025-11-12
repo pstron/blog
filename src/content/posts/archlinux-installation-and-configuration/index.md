@@ -186,9 +186,11 @@ vim /etc/hosts
 
 ```
 127.0.0.1   localhost
-::1 localhost
+::1         localhost
 127.0.1.1   [hostname].localdomain [hostname]
 ```
+
+*(You may use TAB to align them)*
 
 ```bash
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
