@@ -1,22 +1,22 @@
 ---
-title: 'Hyprland Installation & Configuration'
+title: 'Hyprland Setup & Configuration'
 published: 2025-11-12
 draft: false
 tags: ['archlinux', 'hyprland', 'neovim', 'sddm', 'grub', 'dotfiles']
 toc: true
 ---
 
-Working in progress...
+A guide to setup Hyprland as your Arch Linux desktop with my dotfiles.
 
 ## Before reading
 
 :::important
-I assume you have installed the Arch Linux based on my previous [post](/posts/archlinux-installation-and-configuration). If not, please proceed with caution.
+I assume you have installed the Arch Linux based on my previous [post](/posts/archlinux-installation-and-configuration). If not, please proceed carefully.
 :::
 
 ::github{repo="pstron/dotfiles"}
 
-This configuration is based on my dotfiles repository. Use it with `yadm`:
+This configuration is based on my dotfiles repository. You can use it with `yadm`:
 
 ```bash
 sudo pacman -S yadm
@@ -44,13 +44,13 @@ zsh
 
 ### Neovim
 
-Install neovim:
+Install Neovim:
 
 ```bash
 sudo pacman -S neovim
 ```
 
-then launch neovim and load plugins:
+then launch Neovim to automatically install and load plugins:
 
 ```bash
 nvim
@@ -67,7 +67,7 @@ Tools like `tmux`, `btop`, `yazi`, etc. are also ready to use.
 ### Install Hyprland and other packages
 
 ```bash
-sudo pacman -S hyprland hyprlock hyprpolkitagent hyprshot polkit uswm waybar wl-copyboard wofi alacritty xdg-desktop-portal-hyprland xdg-user-dirs
+sudo pacman -S hyprland hyprlock hyprpolkitagent hyprshot polkit uswm waybar wl-clipboard wofi alacritty xdg-desktop-portal-hyprland xdg-user-dirs
 ```
 
 ```bash
@@ -83,7 +83,7 @@ then enable some services:
 ```bash
 sudo systemctl enable bluetooth
 sudo systemctl --user enable waybar.service
-sudo systemctl enable ssdm
+sudo systemctl enable sddm
 ```
 
 Press `Meta + Enter` to open an alacritty terminal. You can `bat ~/.config/hypr/hyprland.conf` and check the `KEYBINDINGS` section to learn how to use.
@@ -136,3 +136,50 @@ Update grub:
 ```bash
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
+
+### Change Hyprland wallpaper
+
+I use a hacky way to do this:
+
+Prepare a `loadwall.sh`, replace `/path/to/wall.png` with yours, and then `chmod +x loadwall.sh`.
+
+Now you can change Hyprland wallpaper by `sudo ./loadwall.sh`.
+
+```bash
+#!/bin/bash
+rm /usr/share/hypr/wall0.png
+rm /usr/share/hypr/wall1.png
+rm /usr/share/hypr/wall2.png
+
+cp /path/to/wall.png /usr/share/hypr/wall0.png
+cp /path/to/wall.png /usr/share/hypr/wall1.png
+cp /path/to/wall.png /usr/share/hypr/wall2.png
+```
+
+### IME
+
+Install packages needed:
+
+```bash
+sudo pacman -S paru # if you don't have an AUR helper
+sudo pacman -S fcitx5-im fcitx5-rime
+paru -S rime-ice-git
+```
+Install Catppuccin theme:
+
+::github{repo="catppuccin/fcitx5"}
+
+```sh
+git clone https://github.com/catppuccin/fcitx5.git
+mkdir -p ~/.local/share/fcitx5/themes/
+cp -r ./fcitx5/src/* ~/.local/share/fcitx5/themes
+```
+
+1. Navigate to `Fcitx5 Configuration` application through your application launcher.
+2. Select the `Addons` Tab.
+3. Select the setting icon (gear-wheel) for `Classical User Interface`, located to the right.
+4. Apply Catppuccin as the desired fcitx5 theme by navigating to `Theme` and later selecting Catppuccin *Flavour* *Accent*.
+
+## Reboot
+
+After doing all the above steps, you can reboot and enjoy your Arch Linux with a fancy Hyprland!

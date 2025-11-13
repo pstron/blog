@@ -36,7 +36,7 @@ rmmod pcspkr
 ls /sys/firmware/efi/efivars
 ```
 
-### Connecting to WIFI
+### Connecting to WI-FI
 
 ```bash
 iwctl
@@ -70,7 +70,7 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 
 ### Setup Btrfs
 
-#### Check partition status
+#### Check partition layout
 
 ```bash
 lsblk
@@ -86,19 +86,19 @@ cfdisk /dev/sdx
 I assume your disk is `sdx`. It may also be `nvmexn1`. You should always replace it carefully with your actual device.
 :::
 
-Make a Swap first. The recommended size is the 60% of your RAM *(e.g. 10GB if your RAM is 16GB)*. The type should be `Linux swap`.
+Make a swap first. The recommended size is about 60% of your RAM *(e.g. 10GB if your RAM is 16GB)*. The type should be `Linux swap`.
 
 Then make the main partition for your files. The type should be the default `Linux filesystem`.
 
-If you didn't have a boot partition before, make a partition of type `EFI System`. About 200 ~ 300 MB is proper, however I would recommend 512 MB.
+If you don't already have a boot partition, make a partition of type `EFI System`. Around 200-300 MB is proper, however I would recommend 512 MB.
 
-After complete the partition, check it again and `[Write]`.
+After completing the partition, check it again and `[Write]`.
 
-Now you can use `fdisk -l` or `lsblk` to check your partition status.
+Now you can use `fdisk -l` or `lsblk` to check your partition layout.
 
 #### Format Btrfs and others
 
-If neccessary, format EFI partition:
+If necessary, format EFI partition:
 
 ```bash
 mkfs.fat -F32 /dev/sdxn
@@ -197,7 +197,7 @@ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 ```
 
 ```bash
-hwclock -systohc
+hwclock --systohc
 ```
 
 ```bash
@@ -242,7 +242,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="loglevel=5 nowatchdog resume=UUID=[your swap partiti
 GRUB_DISABLE_OS_PROBER=false
 GRUB_DEFAULT=saved
 GRUB_SAVEDEFAULT=true
-GRUB_DISABLE_SUBMENU=y # Opitional
+GRUB_DISABLE_SUBMENU=y # Optional
 ```
 
 Apply:
@@ -267,7 +267,7 @@ sudo mkinitcpio -P
 
 ### Enter your Arch Linux
 
-After the above steps, you can reboot and directly enter you Arch Linux now!
+After the above steps, you can reboot and boot into your Arch Linux!
 
 #### Connecting to WIFI
 
@@ -348,13 +348,13 @@ pacman -Sy archlinuxcn-keyring
 pacman -Syyu
 ```
 
-## Hyprland and more with my dotfiles (Opitional)
+## Hyprland and more with my dotfiles (Optional)
 
 Login with your main user instead of root for the following steps.
 
 ::github{repo="pstron/dotfiles"}
 
-My dotfiles repository includes mordern configuration files for CLI tools like `zsh` and a fancy rice for `Hyprland`. For example, get a mordern `zsh` instantly through that:
+My dotfiles repository includes modern configuration files for CLI tools like `zsh` and a fancy rice for `Hyprland`. For example, get a modern `zsh` instantly through that:
 
 ```bash
 sudo pacman -S yadm
@@ -368,7 +368,7 @@ pacman -S fzf # fzf is required
 chsh -s /bin/zsh
 ```
 
-To install Hyprland and other, refer to the next [post](/posts/hyprland-installation-and-configuration).
+To install Hyprland and other related components, refer to the next [post](/posts/hyprland-setup-and-configuration).
 
 ## References
 
