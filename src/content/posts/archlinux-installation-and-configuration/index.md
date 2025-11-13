@@ -2,7 +2,7 @@
 title: 'Arch Linux Installation & Configuration'
 published: 2025-11-12
 draft: false
-tags: ['archlinux', 'zsh', 'refind']
+tags: ['archlinux', 'zsh', 'grub', 'btrfs']
 toc: true
 ---
 
@@ -63,7 +63,7 @@ vim /etc/pacman.d/mirrorlist
 
 Recommend mirrors:
 
-```
+```txt title="mirrorlist"
 Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 ```
@@ -184,7 +184,7 @@ vim /etc/hostname
 vim /etc/hosts
 ```
 
-```
+```txt title="hosts"
 127.0.0.1   localhost
 ::1         localhost
 127.0.1.1   [hostname].localdomain [hostname]
@@ -237,7 +237,7 @@ Configuration:
 vim /etc/default/grub
 ```
 
-```
+```txt title="grub"
 GRUB_CMDLINE_LINUX_DEFAULT="loglevel=5 nowatchdog resume=UUID=[your swap partition uuid]"
 GRUB_DISABLE_OS_PROBER=false
 GRUB_DEFAULT=saved
@@ -275,7 +275,7 @@ After the above steps, you can reboot and directly enter you Arch Linux now!
 vim /etc/NetworkManager/conf.d/wifi_backend.conf
 ```
 
-```
+```txt title="wifi_backend.conf"
 [device]
 wifi.backend=iwd
 ```
@@ -335,7 +335,7 @@ vim /etc/pacman.conf
 
 Uncomment `[multilib]` and `Color`, add `archlinuxcn` at the bottom:
 
-```
+```txt title="pacman.conf"
 [archlinuxcn]
 Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
