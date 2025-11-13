@@ -1,6 +1,6 @@
 ---
 title: 'Hyprland Setup & Configuration'
-published: 2025-11-12
+published: 2025-11-13
 draft: false
 tags: ['archlinux', 'hyprland', 'neovim', 'sddm', 'grub', 'dotfiles']
 toc: true
@@ -143,8 +143,6 @@ I use a hacky way to do this:
 
 Prepare a `loadwall.sh`, replace `/path/to/wall.png` with yours, and then `chmod +x loadwall.sh`.
 
-Now you can change Hyprland wallpaper by `sudo ./loadwall.sh`.
-
 ```bash
 #!/bin/bash
 rm /usr/share/hypr/wall0.png
@@ -155,6 +153,14 @@ cp /path/to/wall.png /usr/share/hypr/wall0.png
 cp /path/to/wall.png /usr/share/hypr/wall1.png
 cp /path/to/wall.png /usr/share/hypr/wall2.png
 ```
+
+Now you can change Hyprland wallpaper by `sudo ./loadwall.sh`.
+
+My wallpaper:
+
+![A simple wallpaper with an Arch icon](arch.png)
+
+You can [download](https://raw.githubusercontent.com/pstron/dotfiles/main/arch.png) it from my GitHub repository.
 
 ### IME
 
