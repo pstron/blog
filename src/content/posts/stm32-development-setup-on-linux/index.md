@@ -448,7 +448,7 @@ This provides the declaration of class `Device`, to provide interfaces to contro
 
 Now let's implement the definition:
 
-```cpp title="Core/Src/Device.cpp
+```cpp title="Core/Src/Device.cpp"
 #include <cstdint>
 #include "stm32f1xx_hal.h"
 #include "Device.h"
