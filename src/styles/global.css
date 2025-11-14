@@ -610,3 +610,9 @@ article img {
     @apply border-accent cursor-pointer;
   }
 }
+
+@layer base {
+  html, body {
+    @apply overflow-x-hidden;
+  }
+}
