@@ -480,6 +480,7 @@ void App() {
     device.light(0);
     device.delay(1000);
     device.light(1);
+    device.delay(1000);
   }
 }
 ```
