@@ -148,6 +148,10 @@ let generatedCss: string = cssLines.join('\n')
       title={siteConfig.title}
       href={new URL('rss.xml', Astro.site)}
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+    />
     <title>{pageTitle}</title>
     <style is:global define:vars={baseCssVars}></style>
     <style is:inline set:html={generatedCss}></style>
@@ -162,6 +166,41 @@ let generatedCss: string = cssLines.join('\n')
       <main class="flex flex-col py-1">
         <slot />
       </main>
+      {pageType === 'article' && 
+        <div id="waline"></div>
+        <script type="module" async>
+          import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+          init({
+            el: '#waline',
+            serverURL: 'https://comment.feynmach.com',
+            dark: 'html[data-theme="catppuccin-macchiato"]',
+            lang: 'en-US',
+            emoji: [],
+            search: false,
+            requiredMeta: ['nick'],
+            reaction: [
+              'https://emoji-cdn.mqrio.dev/👍🏻?style=google',
+              'https://emoji-cdn.mqrio.dev/❤️?style=google',
+              'https://emoji-cdn.mqrio.dev/😎?style=google',
+              'https://emoji-cdn.mqrio.dev/🥳?style=google',
+              'https://emoji-cdn.mqrio.dev/👀?style=google',
+              'https://emoji-cdn.mqrio.dev/🤔?style=google',
+              'https://emoji-cdn.mqrio.dev/😭?style=google',
+              'https://emoji-cdn.mqrio.dev/😐?style=google',
+            ],
+            // locale: {
+            //   reaction0: 'Great',
+            //   reaction1: 'Love',
+            //   reaction2: 'Cool',
+            //   reaction3: 'Celebrating',
+            //   reaction4: 'Looking',
+            //   reaction5: 'Thinking',
+            //   reaction6: 'Crying',
+            //   reaction7: 'Unimpressed',
+            // }
+          });
+        </script>
+      }
       <Footer />
     </div>
   </body>
