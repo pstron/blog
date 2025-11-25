@@ -143,15 +143,15 @@ I use a hacky way to do this:
 
 Prepare a `loadwall.sh`, replace `/path/to/wall.png` with yours, and then `chmod +x loadwall.sh`.
 
-```bash
+```bash title="loadwall.sh"
 #!/bin/bash
-rm /usr/share/hypr/wall0.png
-rm /usr/share/hypr/wall1.png
-rm /usr/share/hypr/wall2.png
+sudo rm /usr/share/hypr/wall0.png
+sudo rm /usr/share/hypr/wall1.png
+sudo rm /usr/share/hypr/wall2.png
 
-cp /path/to/wall.png /usr/share/hypr/wall0.png
-cp /path/to/wall.png /usr/share/hypr/wall1.png
-cp /path/to/wall.png /usr/share/hypr/wall2.png
+sudo cp /path/to/wall.png /usr/share/hypr/wall0.png
+sudo cp /path/to/wall.png /usr/share/hypr/wall1.png
+sudo cp /path/to/wall.png /usr/share/hypr/wall2.png
 ```
 
 Now you can change Hyprland wallpaper by `sudo ./loadwall.sh`.
@@ -175,7 +175,7 @@ Install Catppuccin theme:
 
 ::github{repo="catppuccin/fcitx5"}
 
-```sh
+```bash
 git clone https://github.com/catppuccin/fcitx5.git
 mkdir -p ~/.local/share/fcitx5/themes/
 cp -r ./fcitx5/src/* ~/.local/share/fcitx5/themes
