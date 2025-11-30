@@ -166,7 +166,7 @@ let generatedCss: string = cssLines.join('\n')
       <main class="flex flex-col py-1">
         <slot />
       </main>
-      {pageType === 'article' && 
+      {pageType === 'article' && !Astro.url.pathname.match(/^\/posts\/\d+\/?$/) && !['/posts/', '/posts'].includes(Astro.url.pathname.replace(/\/$/, '')) && 
         <div id="waline"></div>
         <script type="module" async>
           import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';

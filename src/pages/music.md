@@ -2,9 +2,6 @@
 layout: '~/layouts/MarkdownLayout.astro'
 title: Music
 ---
-<p id="hitokoto"><a href="#" id="hitokoto_text">:D 获取中...</a></p>
-<script src="https://v1.hitokoto.cn/?c=i&encode=js&select=%23hitokoto" defer></script>
-
 <link href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
 <script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
