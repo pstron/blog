@@ -6,11 +6,11 @@ tags: ['stm32', 'cmake', 'C++', 'embedded', 'project', 'microcontroller']
 toc: true
 ---
 
-> I dedicate this post to the nearly two months spent on the on-campus competition, to the hard work and collaboration shared with my teammates, and to the university’s Intelligent Transportation Lab for their generous help and guidance.
+> I dedicate this post to the nearly two months spent on the on-campus competition, to the hard work and collaboration shared with my teammates, and to the university's Intelligent Transportation Lab for their generous help and guidance.
 
 ![A photo of our little car](littlecar.jpg)
 
-Here’s our humble little car on the track.
+Here's our humble little car on the track.
 
 :::note
 If you're not into embedded systems, feel free to skim or [skip](/posts/building-nutshell#behind-nutshell) ahead.
@@ -170,31 +170,42 @@ To support more advanced data processing, a simple circular buffer is implemente
 
 ### Conclusion
 
-The Nutshell modules provide a clean and modular foundation for the car’s control logic. `ScheduledTask` handles timed tasks, `Device` abstracts hardware interactions, and `App` orchestrates the overall program flow. This structure simplifies the implementation of complex behaviors such as speed control, steering, and data processing, while also making it easy to extend the system with new features - like melodies or additional sensors - in the future.
+The Nutshell modules provide a clean and modular foundation for the car's control logic. `ScheduledTask` handles timed tasks, `Device` abstracts hardware interactions, and `App` orchestrates the overall program flow. This structure simplifies the implementation of complex behaviors such as speed control, steering, and data processing, while also making it easy to extend the system with new features - like melodies or additional sensors - in the future.
 
 ## Behind Nutshell
 
 My journey began with an ordinary encounter. On my way home, I came across a fascinating robot and stopped to take a look. That simple moment led me to an online group where I learned about the Intelligent Transportation Lab.
 
-I was drawn in by their technical prowess and impressive track record in numerous prestigious competitions. At the time, I was feeling lost and uncertain about my future, so I decided to give it a try and actively threw myself into the lab’s activities. This eventually led me to form the NUT-Shell team for an on-campus competition. We collaborated closely, debating ideas and joining carnivals, info sessions, and evaluations.
+I was drawn in by their technical prowess and impressive track record in numerous prestigious competitions. At the time, I was feeling lost and uncertain about my future, so I decided to give it a try and actively threw myself into the lab's activities. This eventually led me to form the NUT-Shell team for an on-campus competition. We collaborated closely, debating ideas and joining carnivals, info sessions, and evaluations.
 
-There’s a rather amusing part to this. Driven by immense ambition and confidence in my own technical abilities, I was eager to recruit more talent. Although the standard team size was five, we somehow formed a colossal alliance of twenty members - the entity we called “NUT.” But when the on-campus competition began, the reality set in, and we ultimately had to compete as separate, smaller teams. Our grand vision slowly faded, and the bonds within that large group naturally loosened over time.
+There's a rather amusing part to this. Driven by immense ambition and confidence in my own technical abilities, I was eager to recruit more talent. Although the standard team size was five, we somehow formed a colossal alliance of twenty members - the entity we called "NUT." But when the on-campus competition began, the reality set in, and we ultimately had to compete as separate, smaller teams. Our grand vision slowly faded, and the bonds within that large group naturally loosened over time.
 
-Back then, I devoted all my time to writing code and tinkering with parameters, full of passion and conviction. But I was in for a rude awakening. I realized that being good at programming in general didn’t mean I could write a good control program. In that domain, I was starting from square one - a total beginner.
+Back then, I devoted all my time to writing code and tinkering with parameters, full of passion and conviction. But I was in for a rude awakening. I realized that being good at programming in general didn't mean I could write a good control program. In that domain, I was starting from square one - a total beginner.
 
 Unsurprisingly, our performance in the first routine race was a major letdown. The setback caused the initial passion within the team to fizzle out quickly, and honestly, my own drive and spirit were crushed.
 
-But that initial defeat lit a fire under us. Instead of giving up, we channeled our frustration into relentless effort. The team left no stone unturned, meticulously overhauling the car’s mechanics and hardware. I dove headfirst into embedded systems, teaching myself at a breakneck pace and rewriting the codebase in C++. Key architectures like the `ScheduledTask` module were born during this period of intense learning. We added countless patches through trial and error. So when our car - clunky as it was - finally completed a stable lap in the next routine race, it felt like a hard-won victory.
+But that initial defeat lit a fire under us. Instead of giving up, we channeled our frustration into relentless effort. The team left no stone unturned, meticulously overhauling the car's mechanics and hardware. I dove headfirst into embedded systems, teaching myself at a breakneck pace and rewriting the codebase in C++. Key architectures like the `ScheduledTask` module were born during this period of intense learning. We added countless patches through trial and error. So when our car - clunky as it was - finally completed a stable lap in the next routine race, it felt like a hard-won victory.
 
 The breakthrough gave us a thrilling boost, pushing us into an enduring phase of tireless tuning and refinement. Our focus eventually narrowed to a segmented PID approach, and we painstakingly refined each parameter. Our efforts paid off when we clinched fifth place in the subsequent routine race, leaving the entire team exhilarated.
 
-What followed, however, was the wall. We kept pouring time and energy into the car, but our progress flatlined. Minor issues snowballed, and my own motivation was fraying. The code we had inherited was a tangled mess—a labyrinth where finding bugs felt impossible. Have we already reached the limits of our abilities? Watching other teams speed ahead while we struggled with basic reliability was deeply discouraging. Yet, beyond the frustration, my enthusiasm had faded too, because I no longer saw myself in it. My own path was coming into focus, and I realized something crucial: the smart car competition wasn’t it. It just...wasn’t. I stayed out of a sense of obligation to the team, a competitive drive, or perhaps some lingering attachment. So I kept showing up, helping to tune the car, all while feeling a deep, growing hopelessness.
+Looking back, these memories remain etched deeply in my mind. As I write this, whenever I close my eyes, I seem to return to those moments in an instant. It might be the sudden surge of joy when I was sitting by the track, watching our car always overshoot a turn before abruptly correcting, only to realize I'd miswritten an expression - and then seeing it take the curve smoothly after fixing the bug. Or perhaps it was the mix of exasperation and amusement after hours of frantic troubleshooting, finally discovering that a teammate had set the DIP switches wrong. Or maybe it's just one line echoing in my ears:  
+"Did you see that?! Now it's running great!"
 
-Our performance in the competitions never really improved. We became what you might call a “gatekeeper” team - consistently the last among the relatively strong contenders. Divisions began to appear. I can’t say who was right or wrong, but I strongly disagreed with my teammates’ approach to parameter tuning. I wanted to experiment with new strategies, but my ideas were dismissed as unrealistic. The prevailing belief was that a new approach couldn’t possibly match the performance of the old one in such a short time frame. We were completely stuck.
+What followed, however, was the wall. We kept pouring time and energy into the car, but our progress flatlined. Minor issues snowballed, and my own motivation was fraying. The code we had inherited was a tangled mess - a labyrinth where finding bugs felt impossible. Have we already reached the limits of our abilities? Watching other teams speed ahead while we struggled with basic reliability was deeply discouraging. Yet, beyond the frustration, my enthusiasm had faded too, because I no longer saw myself in it. My own path was coming into focus, and I realized something crucial: the smart car competition wasn't it. It just...wasn't. I stayed out of a sense of obligation to the team, a competitive drive, or perhaps some lingering attachment. So I kept showing up, helping to tune the car, all while feeling a deep, growing hopelessness.
 
-The list of unresolved issues loomed larger than ever, while our time and enthusiasm kept slipping away. I must admit: I was never meant for a contest like this. Our team was eventually eliminated. A graceful goodbye, however, is never easy.
+Our performance in the competitions never really improved. We became what you might call a "gatekeeper" team - consistently the last among the relatively strong contenders. Divisions began to appear. I can't say who was right or wrong, but I strongly disagreed with my teammates' approach to parameter tuning. I wanted to experiment with new strategies, but my ideas were dismissed as unrealistic. The prevailing belief was that a new approach couldn't possibly match the performance of the old one in such a short time frame. We were completely stuck.
 
-This is why I’m writing this down - to preserve this chapter of my life, flawed, real, and full of meaning.
+The list of unresolved issues loomed larger than ever, while our time and enthusiasm kept slipping away. I must admit: I was never meant for a contest like this. We gave up. Perhaps that was a sign of weakness - turning what could have been a decent situation into a lingering regret. Or perhaps it was a rational choice for us, freeing up our energy for other pursuits. I still don't know how to judge it, but the truth is, we never returned to tune the car again.
+
+For the last routine race, we went through the motions, only to be eliminated in the first round. Still, thanks to our earlier results and the expanded number of participating teams, we managed to qualify for the finals. By then, I had nearly lost all interest, but my teammate said, "I hope we can finish what we started."
+
+I agreed.
+
+So, no matter what had happened before, we returned for the finals - to let our little car take the Last Dance on the final track, and to perform one last melody. It ran steadily, handled every turn as it should, and stopped in the right position. It was just too slow - almost ten seconds behind the opponent.
+
+And so, our team was eventually eliminated. A graceful goodbye, however, is never easy.
+
+This is why I'm writing this down - to preserve this chapter of my life, flawed, real, and full of meaning.
 
 I need to remember every incredible teammate.
 
