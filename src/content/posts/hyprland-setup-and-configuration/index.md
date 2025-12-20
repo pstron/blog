@@ -67,7 +67,7 @@ Tools like `tmux`, `btop`, `yazi`, etc. are also ready to use.
 ### Install Hyprland and other packages
 
 ```bash
-sudo pacman -S hyprland hyprlock hyprpolkitagent hyprshot polkit uswm waybar wl-clipboard wofi alacritty xdg-desktop-portal-hyprland xdg-user-dirs
+sudo pacman -S hyprland hyprlock hyprpolkitagent hyprshot polkit uswm waybar wl-clipboard wofi mako alacritty xdg-desktop-portal-hyprland xdg-user-dirs
 ```
 
 ```bash
