@@ -133,13 +133,16 @@ if (postData.tags && postData.tags.length > 0) {
           <PostPreview post={seriesPost} />
         ))}
       </section>
-    ) : prev || next ? (
+    ) : null
+    /*
+    prev || next ? (
       <section>
         <DividerText text="More Posts" />
         {prev && <PostPreview post={prev} />}
         {next && <PostPreview post={next} />}
       </section>
     ) : null
+    */
   }
   {
     siteConfig.giscus && (

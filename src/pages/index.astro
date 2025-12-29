@@ -51,6 +51,7 @@ const postsHaveSeries = sortedPosts.some((post) => post.data.series)
         <BlockHeader>Latest Posts</BlockHeader>
         {sortedPosts
           .reverse()
+          .filter((post) => !post.data.hidden)
           .slice(0, Math.floor(siteConfig.pageSize / 2))
           .map((post) => (
             <PostPreview post={post} />
