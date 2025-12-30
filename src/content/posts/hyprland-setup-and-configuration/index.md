@@ -67,7 +67,7 @@ Tools like `tmux`, `btop`, `yazi`, etc. are also ready to use.
 ### Install Hyprland and other packages
 
 ```bash
-sudo pacman -S hyprland hyprlock hyprpolkitagent hyprshot polkit uswm waybar wl-clipboard wofi mako alacritty xdg-desktop-portal-hyprland xdg-user-dirs
+sudo pacman -S hyprland hyprlock hyprpolkitagent hyprshot polkit uswm waybar wl-clipboard wofi mako ghostty alacritty xdg-desktop-portal-hyprland xdg-user-dirs
 ```
 
 ```bash
@@ -75,7 +75,7 @@ sudo pacman -S blueberry bluez bluez-utils brightnessctl pipewire pipewire-audio
 ```
 
 ```bash
-sudo pacman -S ark dolphin firefox gwenview neovide timeshift papirus-icon-theme ttf-jetbrains-mono-nerd wqy-zenhei noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
+sudo pacman -S ark dolphin firefox gwenview mpv neovide timeshift papirus-icon-theme ttf-jetbrains-mono-nerd wqy-zenhei noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 ```
 
 then enable some services:
